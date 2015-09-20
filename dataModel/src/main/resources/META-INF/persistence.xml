@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="modelSTATPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>ru.vist.model_src.src.Brigad</class>
+    <class>ru.vist.model_src.src.Doljnost</class>
+    <class>ru.vist.model_src.src.Groups</class>
+    <class>ru.vist.model_src.src.Objed</class>
+    <class>ru.vist.model_src.src.Performers</class>
+    <class>ru.vist.model_src.src.Predpis</class>
+    <class>ru.vist.model_src.src.Predpr</class>
+    <class>ru.vist.model_src.src.Sotrud</class>
+    <class>ru.vist.model_src.src.Uchast</class>
+    <class>ru.vist.model_src.src.Users</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="javax.persistence.jdbc.password" value="CNFN"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="AC_STAT"/>
+      <property name="eclipselink.canonicalmodel.subpackage" value="one"/>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="modelSTATPU2" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>ru.vist.model.domain.doc.Document</class>
+    <class>ru.vist.model.domain.doc.Precept</class>
+    <class>ru.vist.model.domain.ref.Brigade</class>
+    <class>ru.vist.model.domain.ref.Corporation</class>
+    <class>ru.vist.model.domain.ref.Dept</class>
+    <class>ru.vist.model.domain.ref.Factory</class>
+    <class>ru.vist.model.domain.ref.Post</class>
+    <class>ru.vist.model.domain.ref.ProdUnit</class>
+    <class>ru.vist.model.domain.ref.ProgrammElem</class>
+    <class>ru.vist.model.domain.ref.Reference</class>
+    <class>ru.vist.model.domain.ref.Right</class>
+    <class>ru.vist.model.domain.ref.Worker</class>
+    <class>ru.vist.model.domain.sys.Config</class>
+    <class>ru.vist.model.domain.sys.Subscribe</class>
+    <class>ru.vist.model.domain.sys.Subscriber</class>
+    <class>ru.vist.model.domain.sys.User</class>
+    <class>ru.vist.model.domain.sys.UserGroup</class>
+    <class>ru.vist.model.domain.sys.UserRole</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+      <property name="javax.persistence.jdbc.password" value="CNFN"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.user" value="AW_STAT"/>
+      <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+    </properties>
+  </persistence-unit>
+</persistence>
