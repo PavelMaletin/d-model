@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="vist.stat_VaadinJPAContainerTest_war_1.0PU" transaction-type="JTA">
+    <jta-data-source>jdbc/aw_stat</jta-data-source>
+<!--    <jar-file>../../lib/modelStat-1.jar</jar-file>-->
+        
+    <class>ru.vist.model.domain.doc.Document</class>
+    <class>ru.vist.model.domain.doc.Precept</class>
+    <class>ru.vist.model.domain.ref.Brigade</class>
+    <class>ru.vist.model.domain.ref.Corporation</class>
+    <class>ru.vist.model.domain.ref.Dept</class>
+    <class>ru.vist.model.domain.ref.Factory</class>
+    <class>ru.vist.model.domain.ref.Post</class>
+    <class>ru.vist.model.domain.ref.ProdUnit</class>
+    <class>ru.vist.model.domain.ref.ProgrammElem</class>
+    <class>ru.vist.model.domain.ref.Reference</class>
+    <class>ru.vist.model.domain.ref.Right</class>
+    <class>ru.vist.model.domain.ref.Worker</class>
+    <class>ru.vist.model.domain.sys.Config</class>
+    <class>ru.vist.model.domain.sys.Subscribe</class>
+    <class>ru.vist.model.domain.sys.Subscriber</class>
+    <class>ru.vist.model.domain.sys.User</class>
+    <class>ru.vist.model.domain.sys.UserGroup</class>
+    <class>ru.vist.model.domain.sys.UserRole</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties/>
+  </persistence-unit>
+</persistence>
