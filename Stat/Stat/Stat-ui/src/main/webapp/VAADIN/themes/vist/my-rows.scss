@@ -1,0 +1,14 @@
+@mixin my-rows {
+    $baseHeight: 32px;
+    @for $i from 2 through 10 {
+        .mygrid .v-grid-row.v-special-height-row-#{$i} .v-grid-cell {
+            height: $baseHeight * $i !important;
+        }
+    }
+    @for $i from 1 through 10000 {
+        .mygrid .v-grid-row.v-special-positioned-row-#{$i}  {
+            margin-top: $baseHeight * $i;
+        }
+    }
+}
+

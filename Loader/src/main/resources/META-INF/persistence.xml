@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="SRC_PU" transaction-type="JTA">
+    <jta-data-source>jdbc/ac_stat</jta-data-source>
+    <class>ru.vist.loader.src.Performers</class>
+    <class>ru.vist.loader.src.Objed</class>
+    <class>ru.vist.loader.src.Predpis</class>
+    <class>ru.vist.loader.src.Sotrud</class>
+    <class>ru.vist.loader.src.Doljnost</class>
+    <class>ru.vist.loader.src.Users</class>
+    <class>ru.vist.loader.src.Groups</class>
+    <class>ru.vist.loader.src.Predpr</class>
+    <class>ru.vist.loader.src.Uchast</class>
+    <class>ru.vist.loader.src.Brigad</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+    </properties>
+  </persistence-unit>
+  <persistence-unit name="DEST_PU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/aw_stat</jta-data-source>
+    <!--    <jar-file>../../modelEJB/target/modelEJB-1.0-SNAPSHOT.jar</jar-file>-->
+    <class>ru.vist.model.domain.sys.User</class>
+    <class>ru.vist.model.domain.sys.Subscriber</class>
+    <class>ru.vist.model.domain.sys.Subscribe</class>
+    <class>ru.vist.model.domain.sys.UserGroup</class>
+    <class>ru.vist.model.domain.sys.Config</class>
+    <class>ru.vist.model.domain.sys.UserRole</class>
+    <class>ru.vist.model.domain.doc.Precept</class>
+    <class>ru.vist.model.domain.doc.Document</class>
+    <class>ru.vist.model.domain.ref.Reference</class>
+    <class>ru.vist.model.domain.ref.Post</class>
+    <class>ru.vist.model.domain.ref.Right</class>
+    <class>ru.vist.model.domain.ref.Worker</class>
+    <class>ru.vist.model.domain.ref.Factory</class>
+    <class>ru.vist.model.domain.ref.Dept</class>
+    <class>ru.vist.model.domain.ref.ProgrammElem</class>
+    <class>ru.vist.model.domain.ref.Brigade</class>
+    <class>ru.vist.model.domain.ref.ProdUnit</class>
+    <class>ru.vist.model.domain.ref.Corporation</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    <properties>
+      <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>
