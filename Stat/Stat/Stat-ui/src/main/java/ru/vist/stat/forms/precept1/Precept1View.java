@@ -1,7 +1,7 @@
 package ru.vist.stat.forms.precept1;
 
 import com.vaadin.data.util.BeanItemContainer;
-import ru.vist.stat.forms.CView;
+import ru.vist.stat.subs.CView;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Button;
 import cvr.vist.stat.comps.DateFilterArea;

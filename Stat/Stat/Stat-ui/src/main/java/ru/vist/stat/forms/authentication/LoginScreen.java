@@ -98,7 +98,7 @@ public class LoginScreen extends CssLayout {
         loginInformation.setStyleName("login-information");
         Label loginInfoText = new Label(
                 "<h1>Информация о входе в систему</h1>"
-                + "Для просмотра демо версии войдите в систему как &quot;Гость&quot; без пароля. "
+                + "Для просмотра демо версии войдите в систему как &quot;ГОСТЬ&quot; без пароля. "
                 + "Для регистрации нажмите кнопку &quot;Регистрация&quot;"
                 + "<p>",
                 ContentMode.HTML);

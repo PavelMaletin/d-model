@@ -26,7 +26,7 @@ public class PreceptTable extends Panel {
         this.dateEnd = dateEnd;
         this.dateStart = dateStart;
 
-        FilterTreeTable filterTreeTable = buildFilterTreeTable();
+        FilterTable filterTreeTable = buildFilterTreeTable();
 
         final VerticalLayout mainLayout = new VerticalLayout();
         mainLayout.setSizeFull();
@@ -42,8 +42,8 @@ public class PreceptTable extends Panel {
 
     }
 
-    private FilterTreeTable buildFilterTreeTable() {
-        FilterTreeTable filterTable = new FilterTreeTable();
+    private FilterTable buildFilterTreeTable() {
+        FilterTable filterTable = new FilterTable();
         filterTable.setSizeFull();
 
 //        filterTable.setFilterDecorator(new FilterDecorator());

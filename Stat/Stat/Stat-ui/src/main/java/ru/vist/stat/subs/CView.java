@@ -1,4 +1,4 @@
-package ru.vist.stat.forms;
+package ru.vist.stat.subs;
 
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;

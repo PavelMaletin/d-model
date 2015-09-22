@@ -1,5 +1,6 @@
 package ru.vist.stat.forms;
 
+import ru.vist.stat.subs.CView;
 import ru.vist.stat.VistUI;
 
 import com.vaadin.navigator.Navigator;

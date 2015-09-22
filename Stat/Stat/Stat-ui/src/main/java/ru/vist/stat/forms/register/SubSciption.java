@@ -14,18 +14,18 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.Panel;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Window;
-import ru.vist.model.domain.sys.Subscribe;
 import ru.vist.model.domain.sys.Subscriber;
 import ru.vist.model.domain.sys.User;
-import ru.vist.stat.VistUI;
 import cvr.vist.stat.basiccontrols.BasicButton;
 import cvr.vist.stat.basiccontrols.BasicHorizontalLayout;
 import cvr.vist.stat.common.Utils;
 import ru.vist.stat.db.Init;
 import ru.vist.stat.db.SetSubsDb;
-import ru.vist.stat.forms.CView;
+import ru.vist.stat.subs.CView;
 import java.util.ArrayList;
 import java.util.List;
+import ru.vist.stat.subs.Subs;
+import ru.vist.stat.subs.Subscribe;
 
 /**
  *
@@ -79,11 +79,11 @@ public class SubSciption extends Panel {
             user.setSubscriber(subscriber);
             Init.getJpaUser().addEntity(user);
             subscriber.setProdUnit(Common.getProdUnit());
-            List<Subscribe> ses = new ArrayList<>();
+            List<String> ses = new ArrayList<>();
             for(CheckBox box : boxes){
                 if(box.getValue()){
                     String caption = box.getCaption();
-                    Subscribe s = Init.findSubsribe(caption);
+                    String s = Subs.getSubCode(caption);
                     ses.add(s);
                 }
             }

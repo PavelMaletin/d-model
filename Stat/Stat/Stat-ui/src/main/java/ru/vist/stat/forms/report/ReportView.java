@@ -1,6 +1,6 @@
 package ru.vist.stat.forms.report;
 
-import ru.vist.stat.forms.CView;
+import ru.vist.stat.subs.CView;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.ui.Label;
 import cvr.vist.stat.basiccontrols.BasicLabel;

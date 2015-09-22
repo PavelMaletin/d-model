@@ -1,7 +1,7 @@
 package ru.vist.stat.forms.precept;
 
 import com.vaadin.server.FontAwesome;
-import ru.vist.stat.forms.CView;
+import ru.vist.stat.subs.CView;
 import com.vaadin.ui.TabSheet;
 import com.vaadin.ui.themes.ValoTheme;
 

@@ -45,7 +45,7 @@ public class VistUI extends UI {
             }));
         else
             showMainView();
-        Init.initiateDB();
+//        Init.initiateDB();
         ui = this;
     }
 

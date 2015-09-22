@@ -49,7 +49,6 @@ public class Menu extends CssLayout {
         menuPart = new CssLayout();
         menuPart.addStyleName(ValoTheme.MENU_PART);
 
-        // header of the menu
         final HorizontalLayout top = new HorizontalLayout();
         top.setDefaultComponentAlignment(Alignment.MIDDLE_LEFT);
         top.addStyleName(ValoTheme.MENU_TITLE);

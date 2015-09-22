@@ -1,7 +1,7 @@
 ru/vist/stat/forms/authentication/AccessControl.class
+ru/vist/stat/subs/CView.class
 ru/vist/stat/forms/authentication/LoginScreen.class
 ru/vist/stat/forms/ErrorView.class
-ru/vist/stat/db/DefaultDbObjects.class
 ru/vist/stat/forms/register/ContactProdUnit$ValChgListener.class
 ru/vist/stat/forms/authentication/LoginListener.class
 ru/vist/stat/VistUI$VistUIServlet.class
@@ -15,7 +15,6 @@ ru/vist/stat/db/StringLists.class
 ru/vist/stat/forms/authentication/CurrentUser.class
 ru/vist/stat/forms/register/ContactPerson$EmailValChgListener.class
 ru/vist/stat/forms/precept/PreceptList.class
-ru/vist/stat/forms/CView.class
 ru/vist/stat/db/SetSubsDb.class
 ru/vist/stat/forms/Menu$1.class
 ru/vist/stat/forms/precept/MyHierarchicalContainer.class
@@ -31,6 +30,7 @@ ru/vist/stat/forms/register/RegistrationDlg.class
 ru/vist/stat/VistUI$1.class
 ru/vist/stat/forms/register/ContactPerson$OkBtnListener.class
 ru/vist/stat/forms/precept/PreceptDetail.class
+ru/vist/stat/subs/Subs.class
 ru/vist/stat/db/PreceptUtils.class
 ru/vist/stat/forms/precept1/Precept1View$ClkListener.class
 ru/vist/stat/forms/precept/State.class
@@ -58,3 +58,4 @@ ru/vist/stat/forms/ref/ReferenceView.class
 ru/vist/stat/forms/order/OrderView.class
 ru/vist/stat/forms/register/SubSciption$CancelClickListener.class
 ru/vist/stat/forms/Menu$3.class
+ru/vist/stat/subs/Subscribe.class
