@@ -20,6 +20,7 @@ import ru.vist.model_src.src.Objed;
 import ru.vist.model_src.src.Predpr;
 import ru.vist.model_src.src.Uchast;
 
+
 /**
  *
  * @author chernov
@@ -42,8 +43,6 @@ public class Run {
     }
 
     public static void persist(Object object) {
-//        EntityManagerFactory emf = Persistence.createEntityManagerFactory("modelSTATPU");
-//        EntityManager em = emf.createEntityManager();
         emDest.getTransaction().begin();
         try {
             emDest.persist(object);
