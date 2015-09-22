@@ -19,7 +19,6 @@ import ru.vist.loader.src.Users;
 import ru.vist.model.domain.sys.Config;
 import ru.vist.model.domain.ref.ProdUnit;
 import ru.vist.model.domain.doc.Precept;
-import ru.vist.model.domain.sys.Subscribe;
 import ru.vist.model.domain.sys.Subscriber;
 import java.util.HashMap;
 import java.util.List;
@@ -115,26 +114,9 @@ public class ReferenceFacade extends AbstractFacade<Reference> implements IRef {
         UserRole role = new UserRole("2", "GUEST");
         em.persist(role);
         guest.setUserRole(role);
-        Subscriber subscriber = new Subscriber("3", "Гостевая подписка");
-    //import cvr.vist.stat.forms.order.OrderView;
-    //import cvr.vist.stat.forms.precept.PreceptView;
-    //import cvr.vist.stat.forms.ref.ReferenceView;
-    //import cvr.vist.stat.forms.report.ReportView;
-        
-        Subscribe s1 = new Subscribe("4", "Справочники","ru.vist.stat.forms.ref.ReferenceView");
-        Subscribe s2 = new Subscribe("5", "Предписания","ru.vist.stat.forms.precept.PreceptView");
-        Subscribe s3 = new Subscribe("6", "Наряд-задания","ru.vist.stat.forms.order.OrderView");
-        Subscribe s4 = new Subscribe("7", "Отчеты","ru.vist.stat.forms.report.ReportView");
-        subscriber.addSubs(s1,s2,s3,s4);
-        subscriber.setUser(guest);
-        guest.setSubscriber(subscriber);
         em.persist(guest);
-        em.persist(new UserRole("8", "superadmin"));
-        em.persist(new UserRole("9", "ГОСТЬ"));
-        em.persist(s1);
-        em.persist(s2);
-        em.persist(s3);
-        em.persist(s4);
+//        em.persist(new UserRole("8", "superadmin"));
+//        em.persist(new UserRole("9", "ГОСТЬ"));
     } 
 //    @Override
     public int loadRefs() {

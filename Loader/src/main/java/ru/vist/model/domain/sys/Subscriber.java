@@ -42,14 +42,7 @@ public class Subscriber extends Reference {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToMany
-    @JoinTable(
-            name = "SUBSCIBER_SUBS",
-            joinColumns = {
-                @JoinColumn(name = "SUBSCIBER_ID", referencedColumnName = "ID")},
-            inverseJoinColumns = {
-                @JoinColumn(name = "SUBSCIBE_ID", referencedColumnName = "ID")})
-    private List<Subscribe> subs = new ArrayList<Subscribe>();
+    private List<String> subs = new ArrayList<>();
 
     public User getUser() {
         return user;
@@ -59,15 +52,15 @@ public class Subscriber extends Reference {
         this.user = user;
     }
 
-    public List<Subscribe> getSubs() {
+    public List<String> getSubs() {
         return subs;
     }
 
-    public void setSubs(List<Subscribe> subs) {
+    public void setSubs(List<String> subs) {
         this.subs = subs;
     }
 
-    public void addSubs(Subscribe... sub) {
+    public void addSubs(String... sub) {
         for (int i = 0; i < sub.length; i++)
             subs.add(sub[i]);
     }
