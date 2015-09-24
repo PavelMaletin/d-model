@@ -16,4 +16,5 @@ public class Dept extends ProdUnit {
     public Dept(String id, String name) {
         super(id, name);
     }
+
 }

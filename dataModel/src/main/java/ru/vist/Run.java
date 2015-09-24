@@ -5,7 +5,9 @@
  */
 package ru.vist;
 
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -15,9 +17,11 @@ import ru.vist.model.domain.ref.Corporation;
 import ru.vist.model.domain.ref.Dept;
 import ru.vist.model.domain.ref.Factory;
 import ru.vist.model.domain.ref.Post;
+import ru.vist.model.domain.ref.Reference;
 import ru.vist.model_src.src.Doljnost;
 import ru.vist.model_src.src.Objed;
 import ru.vist.model_src.src.Predpr;
+import ru.vist.model_src.src.Sotrud;
 import ru.vist.model_src.src.Uchast;
 
 
@@ -26,6 +30,8 @@ import ru.vist.model_src.src.Uchast;
  * @author chernov
  */
 public class Run {
+    
+    private static final Map<String,Reference> mapPost = new Hashtable<>();
 
     private static EntityManager em = getEntityManager();
     private static EntityManager emDest = getEntityManagerDest();
@@ -59,9 +65,19 @@ public class Run {
         UUID id = UUID.randomUUID();
         return id.toString();
     }
+    
+    private void insertObj(Reference ref){
+        
+    }
+    
+    private static Reference findRef(String id){
+        
+        return null;
+    }
 
     public static void main(String[] args) {
         int ii = 0;
+        mapPost.clear();
         Query qwr = em.createNamedQuery("Objed.findAll");
         List<Objed> resultList = qwr.getResultList();
         for (Objed o : resultList) {
@@ -83,7 +99,10 @@ public class Run {
                     Post post = new Post(newId(), d.getText());
                     post.setImpKey(d.getKod().longValue());
                     post.setProdUnit(factory);
-                    factory.addPost(post);
+                    if(! mapPost.containsKey(post.getId())){
+                        mapPost.put(post.getId(), post);
+                    }
+                    factory.addPost(post);                    
                 }
                 List<Uchast> uchastList = p.getUchastList();
                 for (Uchast u : uchastList) {
@@ -92,6 +111,10 @@ public class Run {
                     Dept dept = new Dept(newId(), u.getUchastNaim());
                     dept.setParent(factory);
                     factory.addUnit(dept);
+                    List<Sotrud> sotrudList = u.getSotrudList();
+                    for(Sotrud s :sotrudList){
+                        
+                    }
                 }
             }
             System.out.println(" сохраняется " + ii +" объектов");

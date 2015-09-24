@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author chernov
  */
 @Entity
-@Table(name = "REFERENCE",schema = "AW_STAT")
+@Table(name = "REFERENCE",schema = "AW_STAT" )
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "Reference_type")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -68,11 +68,12 @@ public abstract class Reference implements Serializable {
 
     @Column(length = 36)
     protected String idd;
+    
     @Column(name = "DATE_EVENT")
     @Temporal(TemporalType.TIMESTAMP)
     protected Date dateEvent = new Date();
 
-        private Long npp;
+    private Long npp;
 
     public Long getNpp() {
         return npp;
