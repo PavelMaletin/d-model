@@ -2,8 +2,7 @@
 <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
   <persistence-unit name="vist.stat_VaadinJPAContainerTest_war_1.0PU" transaction-type="JTA">
     <jta-data-source>jdbc/aw_stat</jta-data-source>
-<!--    <jar-file>../../lib/modelStat-1.jar</jar-file>-->
-        
+    <!--    <jar-file>../../lib/modelStat-1.jar</jar-file>-->
     <class>ru.vist.model.domain.doc.Document</class>
     <class>ru.vist.model.domain.doc.Precept</class>
     <class>ru.vist.model.domain.ref.Brigade</class>
@@ -22,6 +21,7 @@
     <class>ru.vist.model.domain.sys.User</class>
     <class>ru.vist.model.domain.sys.UserGroup</class>
     <class>ru.vist.model.domain.sys.UserRole</class>
+    <class>ru.vist.model.domain.ref.Equipment</class>
     <exclude-unlisted-classes>true</exclude-unlisted-classes>
     <properties/>
   </persistence-unit>
